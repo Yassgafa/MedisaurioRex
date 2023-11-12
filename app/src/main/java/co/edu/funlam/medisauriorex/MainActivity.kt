@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,8 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-        }
+   }
 
 
     override fun onStart() {
