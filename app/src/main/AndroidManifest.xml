@@ -25,10 +25,10 @@
             android:exported="false">
         </activity>
         <activity
-            android:name=".TipoMascotaActivity"
+            android:name=".MascotaRegistroActivity"
             android:exported="false" />
         <activity
-            android:name=".CorreoActivity"
+            android:name=".RegistroActivity"
             android:exported="false" />
     </application>
 

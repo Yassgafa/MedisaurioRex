@@ -6,10 +6,10 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 
-class TipoMascotaActivity : AppCompatActivity ()  {
+class MascotaRegistroActivity : AppCompatActivity ()  {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.tipo_mascota_layout)
+        setContentView(R.layout.mascota_registro)
         val spinner = findViewById<Spinner>(R.id.spinner_tipoMascota)
         // Crear un array de datos de ejemplo
         val datos = arrayOf("T-rex", "Velociraptor", "Triceratops ", "Pterodáctilo", "Estegosaurio", "Spinosurus", "Brontosaurio", "Mamut")

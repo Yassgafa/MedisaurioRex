@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="50dp"
+            >
+
+            <TextView
+                android:id="@+id/text_view_tipoMascota"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:background="@drawable/redondear"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingBottom="8dp"
+                android:text="Registra a tu mascota"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                />
+
+
+            <Spinner
+                android:id="@+id/spinner_tipoMascota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escoge que tipo de dinosaurio tienes"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:id="@+id/rdg_Genero">
+                <RadioButton
+                    android:id="@+id/rdb_generoMacho"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/verdeDino"
+                    android:text="Macho"
+                    >
+
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rdb_generoHembra"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/verdeDino"
+                    android:text="Hembra"
+                    >
+
+                </RadioButton>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escoge el género de tu dino"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"/>
+
+
+            <EditText
+                android:id="@+id/edittext_nombreMascota"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Dinodan"
+                android:inputType="textPersonName"
+                android:layout_marginTop="15dp"
+                android:paddingStart="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa el nombre de tu dino"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/edittext_edadMascota"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="0"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                android:paddingStart="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa la edad de tu dino"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"/>
+
+
+            <EditText
+                android:id="@+id/edittext_personalidadMascota"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Calmado"
+                android:inputType="text"
+                android:layout_marginTop="15dp"
+                android:paddingStart="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa la personalidad de tu dino"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"/>
+
+
+            <Button
+                android:id="@+id/btn_Mascotaiguiente"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/redondear"
+                android:text="Siguiente"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

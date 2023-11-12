@@ -3,9 +3,7 @@ package co.edu.funlam.medisauriorex
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.Spinner
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val button = this.findViewById<Button>(R.id.btn_main)
         button.setOnClickListener {
-            val intent = Intent (this,CorreoActivity::class.java )
+            val intent = Intent (this,RegistroActivity::class.java )
             startActivity(intent)
 
         }
