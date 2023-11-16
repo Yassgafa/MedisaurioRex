@@ -30,8 +30,12 @@ class ListaMascotasActivity : AppCompatActivity() {
         setContentView(R.layout.activity_lista_mascotas)
 
         val btnAgregarMascotaListaDueño = findViewById<Button>(R.id.btn_agregarMascotaListaDueño)
+
+        //
         recyclerView = findViewById(R.id.recyclerView_mascotas_dueño)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        //
 
         val db = Room.databaseBuilder(applicationContext, DataBaseV2::class.java, "room.db").allowMainThreadQueries().build()
         mascotaDao = db.mascotaDao()

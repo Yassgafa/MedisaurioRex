@@ -30,7 +30,7 @@
             </TextView>
 
 
-            <ListView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listaVacunas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

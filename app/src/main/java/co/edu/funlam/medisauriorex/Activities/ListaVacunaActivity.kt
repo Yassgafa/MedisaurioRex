@@ -2,7 +2,10 @@ package co.edu.funlam.medisauriorex.Activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import co.edu.funlam.medisauriorex.Adapter.AdaptadorListaMascotasDueño
 import co.edu.funlam.medisauriorex.Adapter.AdaptadorListaVacuna
 import co.edu.funlam.medisauriorex.Entidad.Mascota
 import co.edu.funlam.medisauriorex.Entidad.Vacuna
@@ -13,11 +16,11 @@ import java.util.Date
 import java.util.Locale
 
 class ListaVacunaActivity : AppCompatActivity() {
+    private lateinit var adaptador: AdaptadorListaVacuna
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.lista_vacunas_layout)
 
-        val listaLayout = this.findViewById<ListView>(R.id.listaVacunas)
 
         val listaVacuna = mutableListOf<Vacuna>()
 
@@ -35,9 +38,12 @@ class ListaVacunaActivity : AppCompatActivity() {
 
         }
 
+        val recyclerView =this.findViewById <RecyclerView>(R.id.listaVacunas)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val adaptador = AdaptadorListaVacuna(this, listaVacuna)
-        listaLayout.adapter = adaptador
+        adaptador = AdaptadorListaVacuna(this, listaVacuna)
+        recyclerView.adapter = adaptador
+
 
 
 

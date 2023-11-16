@@ -7,6 +7,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.Toast
@@ -43,7 +44,7 @@ class MascotaRegistroActivity : AppCompatActivity ()  {
         editTextNombreMascota= this.findViewById(R.id.edittext_nombreMascota)
         editTextPersonalidadMascota=this.findViewById(R.id.edittext_personalidadMascota)
         editTextEdadMascota= this.findViewById(R.id.edittext_edadMascota)
-        rdbGeneroMascota= this.findViewById(R.id.rdg_Genero)
+
         val btnMascotaSiguiente= this.findViewById<Button>(R.id.btn_Mascotaiguiente)
 
 
@@ -60,11 +61,20 @@ class MascotaRegistroActivity : AppCompatActivity ()  {
                 Toast.makeText(this, "Debe rellenar todos los campos", Toast.LENGTH_LONG).show()
             }else{
 
+                val genero: String
+                val rdbMacho = this.findViewById<RadioButton>(R.id.rdb_generoMacho)
+                if (rdbMacho.isChecked){
+                    genero = "Macho"
+                }else{
+                    genero = "Hembra"
+                }
+
+
                 val mascotaDao = db.mascotaDao()
 
                 dueño= intent.getStringExtra("emailDueño") as String
 
-                    val mascotaNueva = Mascota(dueño, spinner.selectedItem.toString(), rdbGeneroMascota.checkedRadioButtonId.toString(), editTextNombreMascota.text.toString(), editTextEdadMascota.text.toString().toInt(), editTextPersonalidadMascota.text.toString() )
+                    val mascotaNueva = Mascota(dueño, spinner.selectedItem.toString(), genero , editTextNombreMascota.text.toString(), editTextEdadMascota.text.toString().toInt(), editTextPersonalidadMascota.text.toString() )
 
                     mascotaDao.insertAllMascotas(listOf(mascotaNueva))
 
