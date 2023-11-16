@@ -6,16 +6,46 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/personadino"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediSaurioRex"
         tools:targetApi="31">
         <activity
-            android:name=".AgregarVisitaActivity"
+            android:name=".Activities.CerrarSesionActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activities.HistorialCompletoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RecordatorioDino"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ListaVacunaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.VacunaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AgregarVisitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UltimaVisitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.HistoriaClinicaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ListaMascotasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PerfilMascotaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.IniciarSesionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,13 +54,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".MascotaRegistroActivity"
+            android:name=".Activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistroActivity"
+            android:name=".Activities.MascotaRegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RegistroActivity"
             android:exported="false" />
     </application>
 

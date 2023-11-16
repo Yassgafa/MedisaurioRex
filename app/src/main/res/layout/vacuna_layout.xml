@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding= "50dp">
+
+            <ImageView
+                android:id="@+id/imageViewdino"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/personadino" />
+
+            <TextView
+                android:id="@+id/textView4"
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/redondear"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingBottom="8dp"
+                android:text="Agregar vacuna"
+                android:textColor="#FAF9F9"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Cantidad"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editTextCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="Nombre vacuna"
+                android:textSize="18dp"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/editTextNvacuna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Fecha vacuna"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+
+            <EditText
+                android:id="@+id/editTextFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:hint="aaaa/mm/dd"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/buttonConfVacuna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/redondear"
+                android:text="Confirmar"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/redondear"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView_HomeAgregarVacuna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/huevos" />
+
+        <ImageView
+            android:id="@+id/imageView_ConfiguracionAgregarVacuna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/caracoladino" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -94,6 +94,19 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"/>
+            <Button
+                android:id="@+id/btn_cuentaRegistrada"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Ya tengo cuenta"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:background="@drawable/redondear"
+                >
+
+            </Button>
         </LinearLayout>
     </ScrollView>
 

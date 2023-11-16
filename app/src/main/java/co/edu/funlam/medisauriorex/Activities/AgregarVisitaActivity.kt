@@ -1,16 +1,23 @@
-package co.edu.funlam.medisauriorex
-
+package co.edu.funlam.medisauriorex.Activities
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.room.Room
+import co.edu.funlam.medisauriorex.Entidad.Mascota
+import co.edu.funlam.medisauriorex.Entidad.Visita
+import co.edu.funlam.medisauriorex.Funciones.CaracolaFun
+import co.edu.funlam.medisauriorex.Funciones.HomeFuncioon
+import co.edu.funlam.medisauriorex.R
+import co.edu.funlam.medisauriorex.database.DataBaseV2
 import java.text.SimpleDateFormat
+import java.util.Date
 
 class AgregarVisitaActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -18,7 +25,7 @@ class AgregarVisitaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agregar_visita)
 
-        val db = Room.databaseBuilder(applicationContext, AppDatabaseVisita::class.java, "room.db").allowMainThreadQueries().build()
+        val db = Room.databaseBuilder(applicationContext, DataBaseV2::class.java, "room.db").allowMainThreadQueries().build()
         val visitaDao = db.visitaDao()
 
 
@@ -26,6 +33,21 @@ class AgregarVisitaActivity : AppCompatActivity() {
         val editTextPeso = findViewById<EditText>(R.id.editTextPeso)
         val editTextUltimoMedicamento = findViewById<EditText>(R.id.editTextUltimoMedicamento)
         val editTextNota = findViewById<EditText>(R.id.editTextNota)
+
+        val imgHome = this.findViewById<ImageView>(R.id.imageView_HomeAgregarVisita)
+        val imgCaracola = this.findViewById<ImageView>(R.id.imageView_ConfiguracionAgregarVisita)
+
+        val emailDueño = intent.getStringExtra("emailDueño") as String
+
+        imgHome.setOnClickListener {
+            HomeFuncioon.homeFunction(this, emailDueño)
+        }
+
+        imgCaracola.setOnClickListener {
+            CaracolaFun.caracolaFunction(this)
+        }
+
+
 
         //Spinner tipo visita
         val listaTipoVisita = mutableListOf<String>()
@@ -75,21 +97,32 @@ class AgregarVisitaActivity : AppCompatActivity() {
             }
             else {
 
+                val dino = intent.getSerializableExtra("mascota")as Mascota
+
                 val formato = SimpleDateFormat("yyyy/MM/dd")
                 val tipoVisita : String = spinner.selectedItem as String
                 val fechaVisita = editTextFechaVisita.text.toString()
+
+
                 val date = formato.parse(fechaVisita)
+
+                val fechaVisitaLong = date?.time ?: 0
+
                 val pesoMascota = editTextPeso.text.toString().toDouble()
                 val condicionR : String = spinner2.selectedItem as String
                 val ultimoMedi = editTextUltimoMedicamento.text.toString()
                 val notaVisita = editTextNota.text.toString()
 
 
-                val guardarVisita = Visita(tipoVisita, date, pesoMascota, condicionR, ultimoMedi, notaVisita)
-                visitaDao.insertAll(listOf(guardarVisita))
+                val guardarVisita = Visita(dino.idMascota,tipoVisita, fechaVisitaLong, pesoMascota, condicionR, ultimoMedi, notaVisita)
+                visitaDao.insertAllVisita(listOf(guardarVisita))
 
-                /*val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)*/
+                Toast.makeText(this, "Visita agregada, puede regresar", Toast.LENGTH_SHORT).show()
+
+
+                //mensaje del log mostrando los usuarios de la base de datos
+                val visitasLog: List<Visita> = visitaDao.getAllVisita()
+                Log.e("Mascotas registrados", visitasLog.toString())
 
             }
 

@@ -4,36 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarVisitaActivity"
+    tools:context=".Activities.AgregarVisitaActivity"
     >
 
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="84dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:padding="10dp"
-        android:src="@drawable/personadino"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"></ImageView>
-
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="50dp"
-            android:layout_margin="40dp">
+            android:padding="30dp"
+           >
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/personadino"
+           ></ImageView>
 
             <TextView
                 android:id="@+id/textView5"
@@ -42,14 +33,10 @@
                 android:background="@drawable/redondear"
                 android:padding="10dp"
                 android:text="Agregar visita"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView12"
-                tools:ignore="MissingConstraints"
                 ></TextView>
 
             <TextView
@@ -61,22 +48,14 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.159"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                tools:ignore="MissingConstraints" />
+               />
 
             <Spinner
                 android:id="@+id/spinnerTipoVisita"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.41"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                tools:ignore="MissingConstraints" />
+               />
 
             <TextView
                 android:id="@+id/textView3"
@@ -87,25 +66,15 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.153"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerTipoVisita"
-                tools:ignore="MissingConstraints" />
+               />
 
             <EditText
                 android:id="@+id/editTextFechaVisita"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:ems="10"
                 android:hint="aaaa/mm/dd"
-                android:inputType="date"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.228"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:ignore="MissingConstraints" />
+                 />
 
             <TextView
                 android:id="@+id/textView4"
@@ -116,25 +85,16 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextFechaVisita"
-                tools:ignore="MissingConstraints" />
+                />
 
             <EditText
                 android:id="@+id/editTextPeso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:ems="10"
                 android:hint="3.5 kg"
                 android:inputType="numberDecimal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.213"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:ignore="MissingConstraints" />
+               />
 
 
             <TextView
@@ -146,22 +106,14 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextFechaVisita"
-                tools:ignore="MissingConstraints" />
+                />
 
             <Spinner
                 android:id="@+id/spinnerCondicionRespiratoria"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.41"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                tools:ignore="MissingConstraints" />
+                 />
 
             <TextView
                 android:id="@+id/textViewUM"
@@ -172,25 +124,15 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextFechaVisita"
-                tools:ignore="MissingConstraints" />
+                 />
 
             <EditText
                 android:id="@+id/editTextUltimoMedicamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:ems="10"
                 android:hint="Purgante"
-                android:inputType="numberDecimal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.213"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:ignore="MissingConstraints" />
+                 />
 
             <TextView
                 android:id="@+id/textViewNota"
@@ -201,49 +143,34 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextFechaVisita"
-                tools:ignore="MissingConstraints" />
+                />
 
             <EditText
                 android:id="@+id/editTextNota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:ems="10"
                 android:hint="La mascota..."
-                android:inputType="numberDecimal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.213"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:ignore="MissingConstraints" />
+                />
 
             <Button
                 android:id="@+id/btnConfirmarVisita"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
-                android:backgroundTint="@color/verdeDino"
                 android:text="Confirmar"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:background="@drawable/redondear"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextPeso"
-                tools:ignore="MissingConstraints" />
+                 />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
         style="@style/verdeStyle"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="45dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -253,33 +180,17 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageview_RegrasarPerfilMascota"
-            android:layout_width="73dp"
-            android:layout_height="69dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/fosil"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="43dp"
-            tools:layout_editor_absoluteY="631dp" />
-
-        <ImageView
-            android:id="@+id/imageView_HomePerfilMascotas"
-            android:layout_width="73dp"
-            android:layout_height="69dp"
-            android:layout_weight="1"
+            android:id="@+id/imageView_HomeAgregarVisita"
             app:srcCompat="@drawable/huevos"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="166dp"
-            tools:layout_editor_absoluteY="634dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <ImageView
-            android:id="@+id/imageView_ConfiguracionPerfilMascotas"
-            android:layout_width="73dp"
-            android:layout_height="69dp"
-            android:layout_weight="1"
+            android:id="@+id/imageView_ConfiguracionAgregarVisita"
             app:srcCompat="@drawable/caracoladino"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="289dp"
-            tools:layout_editor_absoluteY="634dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

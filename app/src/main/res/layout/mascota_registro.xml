@@ -19,7 +19,7 @@
 
             <TextView
                 android:id="@+id/text_view_tipoMascota"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/redondear"
                 android:gravity="center"
@@ -27,7 +27,7 @@
                 android:paddingBottom="8dp"
                 android:text="Registra a tu mascota"
                 android:textColor="@color/white"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 />
 
